@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.R.integer;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -69,15 +71,37 @@ public class LessonListView extends Activity {
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		// When pressed return, it will goto desktop
 	    if (keyCode == KeyEvent.KEYCODE_BACK) {
-	        moveTaskToBack(false);
-	        Intent intent = new Intent(Intent.ACTION_MAIN);
+	        //moveTaskToBack(false);
+	        /*Intent intent = new Intent(Intent.ACTION_MAIN);
 	        intent.addCategory(Intent.CATEGORY_HOME);
 	        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-	        startActivity(intent);
+	        startActivity(intent);*/
+	        confirmExit();
 	        return true;
 	    }
 	    return super.onKeyDown(keyCode, event);
 	}
+	
+	public void confirmExit(){
+    	AlertDialog.Builder ad = new AlertDialog.Builder(LessonListView.this);
+    	ad.setTitle("退出");
+    	ad.setMessage("是否退出 みんなの日本語?");
+    	ad.setPositiveButton("是", new DialogInterface.OnClickListener() {//退出按钮
+			@Override
+			public void onClick(DialogInterface dialog, int i) {
+				// TODO Auto-generated method stub
+				LessonListView.this.finish();//Shutdown activity
+ 
+			}
+		});
+    	ad.setNegativeButton("否",new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int i) {
+				
+			}
+		});
+    	ad.show();
+    }
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
