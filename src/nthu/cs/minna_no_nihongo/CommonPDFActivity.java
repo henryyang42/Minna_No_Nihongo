@@ -2,6 +2,7 @@ package nthu.cs.minna_no_nihongo;
 
 import net.sf.andpdf.pdfviewer.PdfViewerActivity;
 
+
 public class CommonPDFActivity extends PdfViewerActivity {
 	public int getPreviousPageImageResource() {
 		return R.drawable.left_arrow;
