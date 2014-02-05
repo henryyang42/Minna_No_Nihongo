@@ -1,12 +1,6 @@
 package nthu.cs.minna_no_nihongo;
 
-import net.sf.andpdf.pdfviewer.PdfViewerActivity;
-
-
-
 import android.os.Bundle;
-import android.os.Environment;
-import android.R.integer;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -29,7 +23,7 @@ public class LessonListView extends Activity {
 	
 	private void initList(){
 		for(int i = 1; i <= 50; i++)
-			list[i-1] = "lesson" + i;
+			list[i-1] = "第"+i+"課";
 	}
 	
 	private void initListView() {
@@ -40,18 +34,15 @@ public class LessonListView extends Activity {
 		   listView.setOnItemClickListener(new OnItemClickListener(){
 		       @Override
 		       public void onItemClick(AdapterView<?> parent, View view, int position, long id){
-		    	  String path = Environment.getExternalStorageDirectory()
-							+ "/Minna_No_Nihongo/" + "lessons/" + list[position] + ".pdf";
-		    	  Log.d("MNN", path);
+		    
 		          Toast.makeText(getApplicationContext(),"你選擇的是"+list[position], Toast.LENGTH_SHORT).show();
 		          try{
-		        	  Intent intent = new Intent(LessonListView.this, CommonPDFActivity.class);
-		        	  intent.putExtra(PdfViewerActivity.EXTRA_PDFFILENAME, path);
+		        	  Intent intent = new Intent(LessonListView.this, WebActivity.class);
+		        	  intent.putExtra("name", "lesson"+(position+1));
 			          startActivity(intent);
-			          Log.d("MNN", "load " + list[position] + ".pdf done");
+			          
 		          }
 		          catch(Exception e){
-		        	  Log.d("MNN", "load " + list[position] + ".pdf error");
 		        	  Log.e("MNN", e.getStackTrace().toString());
 		          }
 		       }
@@ -66,16 +57,10 @@ public class LessonListView extends Activity {
 		initListView();
 	}
 	
-	
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		// When pressed return, it will goto desktop
 	    if (keyCode == KeyEvent.KEYCODE_BACK) {
-	        //moveTaskToBack(false);
-	        /*Intent intent = new Intent(Intent.ACTION_MAIN);
-	        intent.addCategory(Intent.CATEGORY_HOME);
-	        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-	        startActivity(intent);*/
 	        confirmExit();
 	        return true;
 	    }
@@ -91,7 +76,6 @@ public class LessonListView extends Activity {
 			public void onClick(DialogInterface dialog, int i) {
 				// TODO Auto-generated method stub
 				LessonListView.this.finish();//Shutdown activity
- 
 			}
 		});
     	ad.setNegativeButton("否",new DialogInterface.OnClickListener() {

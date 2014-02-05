@@ -23,8 +23,6 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		copyAssets();
-		Log.d("MNN", "copy assets done");
 		ImageView imageView = (ImageView) this.findViewById(R.id.imageView1);
 		imageView.setOnClickListener(new OnClickListener() {
 			
@@ -37,57 +35,7 @@ public class MainActivity extends Activity {
 				MainActivity.this.finish();
 			}
 		});
-	}
-	
-	private void copyAssets() {
-		AssetManager assetManager = getAssets();
-		String[] files = null;
-		try {
-			files = assetManager.list("lessons");
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		for (String filename : files) {
-			InputStream in = null;
-			OutputStream out = null;
-			try {
-				in = assetManager.open("lessons" + "/" + filename);
-				File direct = new File(
-						Environment.getExternalStorageDirectory()
-								+ "/Minna_No_Nihongo/" + "lessons/");
-				Log.d("MNN", "direct : " + direct.toString());
-				if (!direct.exists()) {
-					if (direct.mkdirs()) // directory is created;
-						System.out.println("TRUE");
-					else
-						System.out.println("FALSE");
-				}
-				Log.d("MNN", "filename : " + filename);
-				File file = new File(direct, filename);
-				file.createNewFile();
-				out = new FileOutputStream(file);
-				copyFile(in, out);
-				in.close();
-				in = null;
-				out.flush();
-				out.close();
-				out = null;
-			} catch (IOException e) {
-				Log.d("MNN", "Failed to copy asset file: " + filename, e);
-			}
-		}
-	}
-
-	private void copyFile(InputStream in, OutputStream out) throws IOException {
-		byte[] buffer = new byte[1024];
-		int read;
-		while ((read = in.read(buffer)) != -1) {
-			out.write(buffer, 0, read);
-		}
-	}
-
-	
+	}	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

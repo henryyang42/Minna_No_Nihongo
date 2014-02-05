@@ -27,6 +27,7 @@
         
         <activity android:name="nthu.cs.minna_no_nihongo.LessonListView"/>
         <activity android:name="nthu.cs.minna_no_nihongo.CommonPDFActivity"/>
+        <activity android:name="nthu.cs.minna_no_nihongo.WebActivity"/>
     </application>
 
 </manifest>
