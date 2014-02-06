@@ -26,7 +26,6 @@ public class MainActivity extends Activity {
 				Intent intent = new Intent(MainActivity.this, LessonListView.class);
 				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 				MainActivity.this.startActivity(intent);
-				MainActivity.this.finish();
 			}
 		});
 	}	

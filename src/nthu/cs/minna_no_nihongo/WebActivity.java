@@ -53,6 +53,7 @@ public class WebActivity extends Activity implements OnPreparedListener, MediaCo
         	public void onProgressChanged(WebView view, int progress){
         		if(progress == 100){
         			mediaPlayer.start();
+        			mediaController.show();
         			((ProgressBar)WebActivity.this.findViewById(R.id.progressBar)).setVisibility(ProgressBar.GONE);
         		}
         	}
