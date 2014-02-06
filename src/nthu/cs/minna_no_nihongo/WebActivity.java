@@ -28,8 +28,6 @@ public class WebActivity extends Activity implements OnPreparedListener, MediaCo
     private String name;
     private int startOffset;
     
-    
-    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,8 +88,9 @@ public class WebActivity extends Activity implements OnPreparedListener, MediaCo
    	    	mediaPlayer.prepare();
    	    	mediaPlayer.setLooping(true);
    	    	mediaPlayer.start();
-   	    	mediaPlayer.seekTo(startOffset);
    	    	mediaPlayer.pause();
+   	    	mediaPlayer.seekTo(startOffset);
+   	    	
    	    } catch (Exception e) {
    	    	Log.e("MNN", "Could not open file " + name + " for playback.", e);
    	    }
