@@ -20,6 +20,8 @@ import android.widget.ProgressBar;
 public class WebActivity extends Activity implements OnPreparedListener, MediaController.MediaPlayerControl, OnTouchListener{
     private final static String PLAYING_POSITION = "PLAYING_POSITION";
 	private final static String LESSON_ID = "LESSON_ID";
+	private final static String IS_PAUSE = "IS_PAUSE";
+	
 	private WebView webView;
     private MediaPlayer mediaPlayer;
     private MediaController mediaController;
@@ -27,6 +29,7 @@ public class WebActivity extends Activity implements OnPreparedListener, MediaCo
     
     private String name;
     private int startOffset;
+    private boolean isPause;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,7 @@ public class WebActivity extends Activity implements OnPreparedListener, MediaCo
         if(savedInstanceState != null){
         	Log.d("MNN", "recover");
         	startOffset = savedInstanceState.getInt(PLAYING_POSITION);
+        	isPause = savedInstanceState.getBoolean(IS_PAUSE);
         }
         else {
 			startOffset = 0;
@@ -52,7 +56,8 @@ public class WebActivity extends Activity implements OnPreparedListener, MediaCo
         	@Override
         	public void onProgressChanged(WebView view, int progress){
         		if(progress == 100){
-        			mediaPlayer.start();
+        			if(!isPause)        				        			       	
+        				mediaPlayer.start();        			
         			mediaController.show();
         			((ProgressBar)WebActivity.this.findViewById(R.id.progressBar)).setVisibility(ProgressBar.GONE);
         		}
@@ -88,8 +93,6 @@ public class WebActivity extends Activity implements OnPreparedListener, MediaCo
 
    	    	mediaPlayer.prepare();
    	    	mediaPlayer.setLooping(true);
-   	    	mediaPlayer.start();
-   	    	mediaPlayer.pause();
    	    	mediaPlayer.seekTo(startOffset);
    	    	
    	    } catch (Exception e) {
@@ -101,22 +104,31 @@ public class WebActivity extends Activity implements OnPreparedListener, MediaCo
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
     	savedInstanceState.putInt(PLAYING_POSITION, mediaPlayer.getCurrentPosition());
+    	savedInstanceState.putBoolean(IS_PAUSE, !(mediaPlayer.isPlaying()));
     	Log.d("MNN", "onSaveInstance");
+    }
+    @Override
+    protected void onResume(){
+    	super.onResume();
     }
     
     @Override
     protected void onPause() {
     	super.onPause();
+    	mediaPlayer.pause();
     }
     
 	@Override
 	protected void onStop() {
 		super.onStop();
+		
+    }
+	@Override protected void onDestroy() {
+		super.onDestroy();
 		mediaController.hide();
 		mediaPlayer.stop();
 		mediaPlayer.release();
-    }
-
+	}
     //--MediaPlayerControl methods----------------------------------------------------
     public void start() {
     	mediaPlayer.start();
