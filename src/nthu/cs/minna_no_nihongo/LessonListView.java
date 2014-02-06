@@ -38,7 +38,7 @@ public class LessonListView extends Activity {
 		          Toast.makeText(getApplicationContext(),"你選擇的是"+list[position], Toast.LENGTH_SHORT).show();
 		          try{
 		        	  Intent intent = new Intent(LessonListView.this, WebActivity.class);
-		        	  intent.putExtra("name", "lesson"+(position+1));
+		        	  intent.putExtra("LESSON_ID", (position+1));
 			          startActivity(intent);
 			          
 		          }
