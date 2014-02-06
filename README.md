@@ -7,8 +7,8 @@ Therefore, I use WebView instead and turn all PDFs into htmls so that I can read
 
 I also impliment a mediacontroller to enable user to listen to the lesson recording.
 
-This is considered as a practice to get famillar some Android's API and concepts.
+This is considered as a practice to get famillar with some Android APIs and concepts.
 
 Things to be improved:
-1. UI design
-2. To reduce the the .apk size (too much audio)
+(1). UI design
+(2). To reduce the the .apk size (too much audio)
