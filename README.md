@@ -1,5 +1,6 @@
-This is an Android Japanese learning app. 
-
+#みんなの日本語
+##This is an Android Japanese learning app. 
+---
 It contains 50 lessons of みんなの日本語.
 
 At first I use PDFViewer sdk to display the pdf lessons. However, it turned out that the sdk seem to have some problem parsing Japanese and Chinses.

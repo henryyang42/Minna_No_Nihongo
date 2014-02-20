@@ -10,7 +10,6 @@
         android:minSdkVersion="11"
         android:targetSdkVersion="17" />
 
-    
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -27,6 +26,7 @@
         </activity>
         
         <activity android:name="nthu.cs.minna_no_nihongo.LessonListView"/>
+        <activity android:name="nthu.cs.minna_no_nihongo.CommonPDFActivity"/>
         <activity android:name="nthu.cs.minna_no_nihongo.WebActivity"/>
     </application>
 

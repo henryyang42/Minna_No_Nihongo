@@ -94,6 +94,7 @@ public class WebActivity extends Activity implements OnPreparedListener, MediaCo
    	    	mediaPlayer.prepare();
    	    	mediaPlayer.setLooping(true);
    	    	mediaPlayer.seekTo(startOffset);
+   	    	mediaPlayer.setVolume(3, 3);
    	    	
    	    } catch (Exception e) {
    	    	Log.e("MNN", "Could not open file " + name + " for playback.", e);
