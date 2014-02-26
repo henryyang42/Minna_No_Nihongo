@@ -20,6 +20,7 @@ Things to be improved:
 (2). To reduce the the .apk size (too much audio)
 
 [みんなの日本語 Lessons PDF]( https://www.dropbox.com/home/public/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AA%9E1-50%E8%AA%B2%E7%9A%84%E6%9B%B8)
+<br>
 [みんなの日本語 App download](https://dl.dropboxusercontent.com/u/113630504/Minna_No_Nihongo.apk)
 
 
