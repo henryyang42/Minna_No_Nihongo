@@ -1,9 +1,8 @@
 #みんなの日本語
 ##This is an Android Japanese learning app. 
 ##Below are snapshots of this app
-<img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-prn2/v/t34/1958163_737744166250277_1573975308_n.jpg?oh=3afd857480122e55c7d0f77ebeea2029&oe=5310717D&__gda__=1393548018_a1333cab61321a7ce915832b762c8c77" width: "25%"/>
-<img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-frc3/v/t34/1620670_737744132916947_1283007535_n.jpg?oh=9bfb8c97ba06672957ba376413c5e563&oe=5310398D&__gda__=1393564686_bd57c78783eda62077d6fce501de1e20" width: "25%"/>
-[[img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-prn2/v/t34/1958163_737744166250277_1573975308_n.jpg?oh=3afd857480122e55c7d0f77ebeea2029&oe=5310717D&__gda__=1393548018_a1333cab61321a7ce915832b762c8c77" width="25%"]]
+
+![ScreenShot](https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-prn2/v/t34/1958163_737744166250277_1573975308_n.jpg?oh=3afd857480122e55c7d0f77ebeea2029&oe=5310717D&__gda__=1393548018_a1333cab61321a7ce915832b762c8c77)
 ![ScreenShot](https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-frc3/v/t34/1620670_737744132916947_1283007535_n.jpg?oh=9bfb8c97ba06672957ba376413c5e563&oe=5310398D&__gda__=1393564686_bd57c78783eda62077d6fce501de1e20)
 
 ---
@@ -20,7 +19,8 @@ Things to be improved:
 (1). UI design
 (2). To reduce the the .apk size (too much audio)
 
-[1]: https://www.dropbox.com/home/public/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AA%9E1-50%E8%AA%B2%E7%9A%84%E6%9B%B8        "みんなの日本語 Lessons"
+[みんなの日本語 Lessons PDF]( https://www.dropbox.com/home/public/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E6%9C%AC%E8%AA%9E1-50%E8%AA%B2%E7%9A%84%E6%9B%B8)
+[みんなの日本語 App download](https://dl.dropboxusercontent.com/u/113630504/Minna_No_Nihongo.apk)
 
 
 ######みんなの日本語  All Rights Reserved.
