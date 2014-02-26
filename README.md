@@ -1,10 +1,9 @@
 #みんなの日本語
 ##This is an Android Japanese learning app. 
 ##Below are snapshots of this app
-![anapshot](snapshot0.jpg =100x)
 
-![ScreenShot](https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-prn2/v/t34/1958163_737744166250277_1573975308_n.jpg?oh=3afd857480122e55c7d0f77ebeea2029&oe=5310717D&__gda__=1393548018_a1333cab61321a7ce915832b762c8c77 =100x)
-![ScreenShot](https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-frc3/v/t34/1620670_737744132916947_1283007535_n.jpg?oh=9bfb8c97ba06672957ba376413c5e563&oe=5310398D&__gda__=1393564686_bd57c78783eda62077d6fce501de1e20 =100x)
+<img src="snapshot0.jpg" width="50%" />
+<img src="snapshot1.jpg" width="50%" />
 
 ---
 It contains 50 lessons of みんなの日本語.
@@ -22,7 +21,7 @@ Things to be improved:
 
 [みんなの日本語 Lessons PDF]( https://www.dropbox.com/sh/f3unjvmh6dmwnct/CO9TU6m31G)
 <br>
-[みんなの日本語 App download](https://dl.dropboxusercontent.com/u/113630504/Minna_No_Nihongo.apk)
+[みんなの日本語 Apk download](https://dl.dropboxusercontent.com/u/113630504/Minna_No_Nihongo.apk)
 
 
 ######みんなの日本語  All Rights Reserved.
