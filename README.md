@@ -1,4 +1,4 @@
-#みんなの日本語
+##みんなの日本語
 ---
 ###This is an Android Japanese learning app. 
 ###Below are snapshots of this app
