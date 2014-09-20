@@ -1,4 +1,4 @@
-##[みんなの日本語 (Download apk)](https://www.dropbox.com/sh/f3unjvmh6dmwnct/CO9TU6m31G)
+##[みんなの日本語 (Download apk)](https://dl.dropboxusercontent.com/u/113630504/Minna_No_Nihongo.apk)
 ---
 ###This is an Android Japanese learning app. 
 ###Below are snapshots of this app
