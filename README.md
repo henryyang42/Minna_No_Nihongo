@@ -3,8 +3,8 @@
 ###This is an Android Japanese learning app. 
 ###Below are snapshots of this app
 
-<img src="https://github.com/henryyang42/Minna_No_Nihongo/blob/master/snapshot0.jpg" width="50%" />
-<img src="https://github.com/henryyang42/Minna_No_Nihongo/blob/master/snapshot1.jpg" width="50%" />
+<img src="https://raw.githubusercontent.com/henryyang42/Minna_No_Nihongo/master/snapshot0.jpg" width="50%" />
+<img src="https://raw.githubusercontent.com/henryyang42/Minna_No_Nihongo/master/snapshot1.jpg" width="50%" />
 
 ---
 ###It contains 50 lessons of みんなの日本語.
